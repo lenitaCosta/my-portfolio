@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-area: experience;
   gap: 24px;
-  max-width: 500%;
+  max-width: 500px;
+
+  grid-area: experience;
 
   p {
     font-weight: 300;
@@ -13,12 +14,69 @@
     color: var(--text-secondary);
     text-align: center;
   }
-  @media (min-width: 768) {
-    align-items: flex-start;
-    p {
-      font-size: 24px;
-      font-weight: 36px;
-      text-align: start;
+  .experience-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .experience-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  img {
+    filter: grayscale(100%);
+  }
+
+  .experience-unit {
+    width: 300px;
+    height: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--text-secondary);
+    justify-content: center;
+    align-items: center;
+
+    .experience-measure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+
+      border-radius: 24px;
+      height: 30px;
+      border: 2px solid linear-gradient(90deg, #777cf4 2.62%, #f47777 93.38%);
+      background: linear-gradient(90deg, #777cf4 2.62%, #f47777 93.38%);
+      color: var(--text-primary);
+      font-weight: 300;
+      text-align: center;
+      font-size: 12px;
+
+      &.measure-1 {
+        width: 33%;
+      }
+      &.measure-2 {
+        width: 33%;
+      }
+      &.measure-3 {
+        width: 33%;
+      }
+      &.measure-4 {
+        width: 33%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+
+      p {
+        font-size: 24px;
+        font-weight: 36px;
+        text-align: start;
+      }
     }
   }
 }
